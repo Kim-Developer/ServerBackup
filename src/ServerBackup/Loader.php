@@ -8,11 +8,15 @@ use pocketmine\utils\TextFormat;
 use pocketmine\utils\Utils;
 
 use ServerBackup\command\ServerBackupCommand;
+use ServerBackup\task\ServerBackupCheck;
 
 class Loader extends PluginBase{
 
     /** @var string */
     public $prefix = TextFormat::LIGHT_PURPLE . '<' . TextFormat::WHITE . '시스템' . TextFormat::LIGHT_PURPLE . '>' . TextFormat::WHITE . ' ';
+
+    /** @var string */
+    public $backupMode = 'off';
 
     public $os_list = [
         'win' => 'Windows',
@@ -23,16 +27,16 @@ class Loader extends PluginBase{
     ];
 
     public function onLoad(): void{
-
+        if (date_default_timezone_get() !== 'Asia/Seoul'){
+			date_default_timezone_set('Asia/Seoul');
+		}
         $this->getLogger()->notice('Github: ' . TextFormat::YELLOW . 'https://github.com/Kim-Developer/ServerBackup');
         $this->getLogger()->notice('License: ' . TextFormat::YELLOW . 'https://github.com/Kim-Developer/ServerBackup/blob/master/LICENSE');
         $this->getLogger()->notice('Manual: ' . TextFormat::YELLOW . 'https://github.com/Kim-Developer/ServerBackup/blob/master/README.md');
         $this->getLogger()->notice('Author: ' . TextFormat::YELLOW . 'bl3an_dev / For PocketMine-MP 3.0.0, 4.0.0');
-
     }
 
     public function onEnable(): void{
-        
         $os = Utils::getOS();
         
         if (isset($this->os_list[$os])){
@@ -65,6 +69,7 @@ class Loader extends PluginBase{
 
         $this->getServer()->getCommandMap()->register('SB', new ServerBackupCommand($this));
 
+        $this->getScheduler()->scheduleRepeatingTask(new ServerBackupCheck($this), 20 * 30);
     }
 
 }

@@ -35,8 +35,9 @@ class ServerBackupAsync_3 extends AsyncTask{
 
     public function onCompletion(Server $server): void {
         $plugin = Server::getInstance()->getPluginManager()->getPlugin('ServerBackup');
-        Server::getInstance()->broadcastMessage($plugin->prefix . '정상적으로 서버 백업이 완료 되었습니다..');
-        Server::getInstance()->broadcastMessage($plugin->prefix . '백업 파일이 저장된 경로: ' . TextFormat::YELLOW . $this->backupPath);
+        Server::getInstance()->getLogger()->notice($plugin->prefix . '정상적으로 서버 백업이 완료 되었습니다..');
+        Server::getInstance()->getLogger()->notice($plugin->prefix . '백업 파일이 저장된 경로: ' . TextFormat::YELLOW . $this->backupPath);
+        $plugin->backupMode = 'off';
     }
 
     public function OSCheck(): void{
