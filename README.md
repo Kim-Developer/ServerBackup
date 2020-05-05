@@ -12,7 +12,7 @@ Type command `/sb` and wait just a moment..
 
 <br>
 
-`/sb`를 서버내 또는 콘솔에서 입력 한뒤 잠시뒤에
+`/sb`를 서버내 또는 콘솔에서 입력하고 잠시뒤에
 
 <br>
 
