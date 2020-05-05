@@ -28,8 +28,8 @@ class Loader extends PluginBase{
 
     public function onLoad(): void{
         if (date_default_timezone_get() !== 'Asia/Seoul'){
-			date_default_timezone_set('Asia/Seoul');
-		}
+            date_default_timezone_set('Asia/Seoul');
+        }
         $this->getLogger()->notice('Github: ' . TextFormat::YELLOW . 'https://github.com/Kim-Developer/ServerBackup');
         $this->getLogger()->notice('License: ' . TextFormat::YELLOW . 'https://github.com/Kim-Developer/ServerBackup/blob/master/LICENSE');
         $this->getLogger()->notice('Manual: ' . TextFormat::YELLOW . 'https://github.com/Kim-Developer/ServerBackup/blob/master/README.md');
