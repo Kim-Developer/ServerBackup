@@ -22,7 +22,7 @@ class Loader extends PluginBase{
         'ios' => 'IOS'
     ];
 
-    public function onLoad(): void {
+    public function onLoad(): void{
 
         $this->getLogger()->notice('Github: ' . TextFormat::YELLOW . 'https://github.com/Kim-Developer/ServerBackup');
         $this->getLogger()->notice('License: ' . TextFormat::YELLOW . 'https://github.com/Kim-Developer/ServerBackup/blob/master/LICENSE');
@@ -31,7 +31,7 @@ class Loader extends PluginBase{
 
     }
 
-    public function onEnable(): void {
+    public function onEnable(): void{
         
         $os = Utils::getOS();
         
@@ -56,7 +56,7 @@ class Loader extends PluginBase{
         }else{
 
             $this->getLogger()->notice('이 플러그인은 윈도우와 리눅스 계열 운영체제만 지원하고 있습니다.');
-            $this->getLogger()->notice($this->os_list[$os] . ' 운영체제를 사용중 입니다.');
+            $this->getLogger()->notice($os . ' 운영체제를 사용중 입니다.');
             $this->getLogger()->notice('플러그인이 ' . TextFormat::RED . '비활성화' . TextFormat::WHITE . ' 되었습니다.');
     
             $this->getServer()->getPluginManager()->disablePlugin($this);
