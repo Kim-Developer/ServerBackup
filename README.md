@@ -21,6 +21,16 @@ Type command `/sb` or `/sb all` and wait just a moment..
 
 <br>
 
+And go to the path and check it!
+
+<br>
+
+해당 경로로 가서 백업 파일을 확인하세요!
+
+<br>
+
+![](https://github.com/Kim-Developer/ServerBackup/blob/master/imgs/path.PNG)
+
 # Command: /sb
 
 bin, (src,vender) or PocketMine-MP.phar을 제외한 나머지를 백업 합니다.
@@ -34,15 +44,3 @@ bin, (src,vender) or PocketMine-MP.phar을 제외한 나머지를 백업 합니�
 bin, (src,vender) or PocketMine-MP.phar을 포함해 모든 파일을 백업 합니다.
 
 ![](https://github.com/Kim-Developer/ServerBackup/blob/master/imgs/sb%20all.PNG)
-
-<br>
-
-And go to the path and check it!
-
-<br>
-
-해당 경로로 가서 백업 파일을 확인하세요!
-
-<br>
-
-![](https://github.com/Kim-Developer/ServerBackup/blob/master/imgs/path.PNG)
