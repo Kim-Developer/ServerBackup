@@ -23,13 +23,17 @@ Type command `/sb` or `/sb all` and wait just a moment..
 
 # Command: /sb
 
+bin, (src,vender) or PocketMine-MP.phar을 제외한 나머지를 백업 합니다.
+
 ![](https://github.com/Kim-Developer/ServerBackup/blob/master/imgs/sb.PNG)
 
 <br>
 
 # Command: /sb all
 
-![](https://github.com/Kim-Developer/ServerBackup/blob/master/imgs/sb all.PNG)
+bin, (src,vender) or PocketMine-MP.phar을 포함해 모든 파일을 백업 합니다.
+
+![](https://github.com/Kim-Developer/ServerBackup/blob/master/imgs/sb%20all.PNG)
 
 <br>
 
