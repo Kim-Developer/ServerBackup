@@ -33,7 +33,7 @@ And go to the path and check it!
 
 # Command: /sb
 
-bin, (src,vender) or PocketMine-MP.phar을 제외한 나머지를 백업 합니다.
+bin, (src,vender) or PocketMine-MP.phar, crashdumps 를 제외한 나머지를 백업 합니다.
 
 ![](https://github.com/Kim-Developer/ServerBackup/blob/master/imgs/sb.PNG)
 
@@ -41,6 +41,6 @@ bin, (src,vender) or PocketMine-MP.phar을 제외한 나머지를 백업 합니�
 
 # Command: /sb all
 
-bin, (src,vender) or PocketMine-MP.phar을 포함해 모든 파일을 백업 합니다.
+bin, (src,vender) or PocketMine-MP.phar, crashdumps 를 포함해 모든 파일을 백업 합니다.
 
 ![](https://github.com/Kim-Developer/ServerBackup/blob/master/imgs/sb%20all.PNG)
