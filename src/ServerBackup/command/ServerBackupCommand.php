@@ -7,6 +7,8 @@ use pocketmine\command\CommandSender;
 
 use pocketmine\Player;
 
+use pocketmine\utils\TextFormat;
+
 use ServerBackup\task\ServerBackupAsync_3;
 use ServerBackup\task\ServerBackupAsync_4;
 
@@ -38,15 +40,21 @@ class ServerBackupCommand extends Command{
             return true;
         }
 
+        $this->owner->mode = 'off';
+        $this->owner->backupMode = 'on';
+
+        if (isset($args[0]) and $args[0] === 'all'){
+            $this->owner->mode = 'on';
+        }
+
         if (substr($this->owner->getServer()->getApiVersion(), 0, 1) === '4'){ // API 4.0.0
             $this->owner->getServer()->getAsyncPool()->submitTask(new ServerBackupAsync_4($this->owner->getServer()->getDataPath()));
         }else{ // API 3.0.0, 2.0.0, ...
             $this->owner->getServer()->getAsyncPool()->submitTask(new ServerBackupAsync_3($this->owner->getServer()->getDataPath()));
         }
 
-        $this->owner->backupMode = 'on';
-
-        $this->owner->getServer()->getLogger()->notice($this->owner->prefix . '서버 백업을 시작 했습니다..');
+        $this->owner->getServer()->getLogger()->notice($this->owner->prefix . '서버 수동 백업을 시작 했습니다..');
+        $this->owner->getServer()->getLogger()->notice($this->owner->prefix . '모드 상태: ' . TextFormat::YELLOW . $this->owner->mode);
         return true;
     }
 

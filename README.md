@@ -6,20 +6,30 @@ v1.0.0 - 첫 릴리즈..<br>
 v1.0.1 - 버그 수정..<br>
 v1.0.2 - 3.0.0, 4.0.0 지원..<br>
 v1.0.3 - 매 정각마다 서버팩을 자동으로 백업합니다.. (30초마다 체킹)<br>
+v1.0.31 - 버그 수정..<br>
+v1.0.4 - 기능 개편 및 수정<br>
 
 # How to use this plugin..
 
 <br>
 
-Type command `/sb` and wait just a moment..
+Type command `/sb` or `/sb all` and wait just a moment..
 
 <br>
 
-`/sb`를 서버내 또는 콘솔에서 입력하고 잠시뒤에
+`/sb` 또는 `/sb all` 을 콘솔에서 입력하고 잠시뒤에
 
 <br>
 
-![](https://github.com/Kim-Developer/ServerBackup/blob/master/imgs/backup.PNG)
+# Command: /sb
+
+![](https://github.com/Kim-Developer/ServerBackup/blob/master/imgs/sb.PNG)
+
+<br>
+
+# Command: /sb all
+
+![](https://github.com/Kim-Developer/ServerBackup/blob/master/imgs/sb all.PNG)
 
 <br>
 
